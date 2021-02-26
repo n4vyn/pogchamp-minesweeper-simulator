@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pogchamp minesweeper simulator</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <div class="settings">
+        <div class="presets">
+            <span onclick="setPreset(0)">Easy</span> | 
+            <span onclick="setPreset(1)">Medium</span> | 
+            <span onclick="setPreset(2)">Hard</span>
+        </div>
+        <div>
+            w: <input type="number" id="width" onchange="setWidth(event)">
+            h: <input type="number" id="height" onchange="setHeight(event)">
+            m: <input type="number" id="mines" onchange="setMines(event)">
+        </div>
+        <div>
+            <label for="firstclick">auto first click</label>
+            <input type="checkbox" id="firstclick" checked onchange="toggleFirstClick()"> <br>
+            <button onclick="newGame()">new game</button>
+        </div>        
+    </div>
+    <div class="game">
+        <div>
+            mines left: <span id="minesleftE">0</span>
+            <span style="float: right;">
+                time: <span id="timeE">0</span>
+            </span>
+        </div>
+        <table id="table">
+        </table>
+    </div>
+    
+</body>
+
+</html>
